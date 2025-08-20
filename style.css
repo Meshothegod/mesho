@@ -35,45 +35,12 @@ body {
   filter: hue-rotate(var(--cursor-hue, 0deg)); 
 }
 
-
-body.home-theme {
-  --primary-gradient: from-purple-400;
-  --secondary-gradient: to-pink-600;
-  --primary-color: #00CED1; 
-  --secondary-color: #FF6B9E;
-  --cursor-hue: 180deg; 
-}
-
-body.hacker-theme {
-  --primary-gradient: from-green-500;
-  --secondary-gradient: to-teal-600;
-  --primary-color: #22C55E; 
-  --secondary-color: #2DD4BF;
-  --cursor-hue: 120deg; 
-}
-
-body.rain-theme {
-  --primary-gradient: from-blue-800;
-  --secondary-gradient: to-blue-600;
-  --primary-color: #1E3A8A; 
-  --secondary-color: #2563EB;
-  --cursor-hue: 240deg; 
-}
-
 body.anime-theme {
   --primary-gradient: from-red-600;
   --secondary-gradient: to-red-400;
   --primary-color: #DC2626; 
   --secondary-color: #F87171;
   --cursor-hue: 0deg; 
-}
-
-body.car-theme {
-  --primary-gradient: from-yellow-500;
-  --secondary-gradient: to-yellow-300;
-  --primary-color: #EAB308; 
-  --secondary-color: #FACC15;
-  --cursor-hue: 60deg; 
 }
 
 
@@ -264,7 +231,7 @@ body.car-theme {
 }
 
 
-#home-theme, #hacker-theme, #rain-theme, #anime-theme, #car-theme, #results-theme {
+ #anime-theme,  {
   background-image: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
   touch-action: manipulation;
 }
@@ -772,4 +739,5 @@ body.car-theme {
   30% {
     clip: rect(65px, 9999px, 45px, 0);
   }
+
 }
