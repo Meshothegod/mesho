@@ -24,30 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const profileBio = document.getElementById('profile-bio');
   const visitorCount = document.getElementById('visitor-count');
   const backgroundMusic = document.getElementById('background-music');
-  const hackerMusic = document.getElementById('hacker-music');
-  const rainMusic = document.getElementById('rain-music');
   const animeMusic = document.getElementById('anime-music');
-  const carMusic = document.getElementById('car-music');
   const homeButton = document.getElementById('home-theme');
-  const hackerButton = document.getElementById('hacker-theme');
-  const rainButton = document.getElementById('rain-theme');
   const animeButton = document.getElementById('anime-theme');
-  const carButton = document.getElementById('car-theme');
   const resultsButtonContainer = document.getElementById('results-button-container');
   const resultsButton = document.getElementById('results-theme');
   const volumeIcon = document.getElementById('volume-icon');
   const volumeSlider = document.getElementById('volume-slider');
   const transparencySlider = document.getElementById('transparency-slider');
   const backgroundVideo = document.getElementById('background');
-  const hackerOverlay = document.getElementById('hacker-overlay');
   const snowOverlay = document.getElementById('snow-overlay');
-  const glitchOverlay = document.querySelector('.glitch-overlay');
   const profileBlock = document.getElementById('profile-block');
   const skillsBlock = document.getElementById('skills-block');
-  const pythonBar = document.getElementById('python-bar');
-  const cppBar = document.getElementById('cpp-bar');
-  const csharpBar = document.getElementById('csharp-bar');
-  const resultsHint = document.getElementById('results-hint');
   const profilePicture = document.querySelector('.profile-picture');
   const profileContainer = document.querySelector('.profile-container');
   const socialIcons = document.querySelectorAll('.social-icon');
@@ -201,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  const name = "JAQLIV";
+  const name = "Mesho";
   let nameText = '';
   let nameIndex = 0;
   let isNameDeleting = false;
@@ -236,7 +224,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   const bioMessages = [
-    "Fu*k Guns.lol & Fakecrime.bio got banned too often, so I created my own.",
+    "Welcome Dear One! Have A Nice Visit.",
     "\"Hello, World!\""
   ];
   let bioText = '';
@@ -358,22 +346,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function switchTheme(videoSrc, audio, themeClass, overlay = null, overlayOverProfile = false) {
     let primaryColor;
     switch (themeClass) {
-      case 'home-theme':
-        primaryColor = '#00CED1';
-        break;
-      case 'hacker-theme':
-        primaryColor = '#22C55E';
-        break;
-      case 'rain-theme':
-        primaryColor = '#1E3A8A';
-        break;
       case 'anime-theme':
         primaryColor = '#DC2626';
         break;
-      case 'car-theme':
-        primaryColor = '#EAB308';
-        break;
-      default:
         primaryColor = '#00CED1';
     }
     document.documentElement.style.setProperty('--primary-color', primaryColor);
@@ -438,22 +413,6 @@ document.addEventListener('DOMContentLoaded', () => {
     switchTheme('assets/background.mp4', backgroundMusic, 'home-theme');
   });
 
-  hackerButton.addEventListener('click', () => {
-    switchTheme('assets/hacker_background.mp4', hackerMusic, 'hacker-theme', hackerOverlay, false);
-  });
-  hackerButton.addEventListener('touchstart', (e) => {
-    e.preventDefault();
-    switchTheme('assets/hacker_background.mp4', hackerMusic, 'hacker-theme', hackerOverlay, false);
-  });
-
-  rainButton.addEventListener('click', () => {
-    switchTheme('assets/rain_background.mov', rainMusic, 'rain-theme', snowOverlay, true);
-  });
-  rainButton.addEventListener('touchstart', (e) => {
-    e.preventDefault();
-    switchTheme('assets/rain_background.mov', rainMusic, 'rain-theme', snowOverlay, true);
-  });
-
   animeButton.addEventListener('click', () => {
     switchTheme('assets/anime_background.mp4', animeMusic, 'anime-theme');
   });
@@ -461,15 +420,6 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     switchTheme('assets/anime_background.mp4', animeMusic, 'anime-theme');
   });
-
-  carButton.addEventListener('click', () => {
-    switchTheme('assets/car_background.mp4', carMusic, 'car-theme');
-  });
-  carButton.addEventListener('touchstart', (e) => {
-    e.preventDefault();
-    switchTheme('assets/car_background.mp4', carMusic, 'car-theme');
-  });
-
  
   function handleTilt(e, element) {
     const rect = element.getBoundingClientRect();
@@ -668,4 +618,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   typeWriterStart();
+
 });
